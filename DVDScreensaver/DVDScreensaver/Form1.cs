@@ -35,6 +35,7 @@ namespace DVDScreensaver
                 speedX *= -1;
                 Task.Run(() => Console.Beep());
                 button1.BackColor = Color.FromArgb(ran.Next(255), ran.Next(255),ran.Next(255));
+                BackColor = Color.FromArgb(ran.Next(255), ran.Next(255), ran.Next(255));
             }
 
             if (button1.Bottom >= ClientRectangle.Bottom ||
@@ -43,6 +44,7 @@ namespace DVDScreensaver
                 speedY *= -1;
                 Task.Run(() => Console.Beep());
                 button1.BackColor = Color.FromArgb(ran.Next(255), ran.Next(255), ran.Next(255));
+                BackColor = Color.FromArgb(ran.Next(255), ran.Next(255), ran.Next(255));
 
             }
         }
