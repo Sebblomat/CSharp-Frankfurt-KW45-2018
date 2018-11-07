@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2048
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HalloVererbung.Model", "HalloVererbung.Model\HalloVererbung.Model.csproj", "{31A31866-DF62-4FEE-BB8E-03F4461B8D8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HalloVererbung.TestConsole", "HalloVererbung.TestConsole\HalloVererbung.TestConsole.csproj", "{98D69F5B-F7A4-4D42-94FE-857ABBF9D4F5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31A31866-DF62-4FEE-BB8E-03F4461B8D8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31A31866-DF62-4FEE-BB8E-03F4461B8D8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31A31866-DF62-4FEE-BB8E-03F4461B8D8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31A31866-DF62-4FEE-BB8E-03F4461B8D8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98D69F5B-F7A4-4D42-94FE-857ABBF9D4F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98D69F5B-F7A4-4D42-94FE-857ABBF9D4F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98D69F5B-F7A4-4D42-94FE-857ABBF9D4F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98D69F5B-F7A4-4D42-94FE-857ABBF9D4F5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ED2F89EC-92FA-4AEF-A81C-E883A73DD631}
+	EndGlobalSection
+EndGlobal
