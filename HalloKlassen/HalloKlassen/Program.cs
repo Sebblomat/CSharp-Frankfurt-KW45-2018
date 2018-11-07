@@ -14,8 +14,8 @@ namespace HalloKlassen
 
             int zahl;
             Zug meinZug = null; //deklaration
-            meinZug = new Zug(); //instanzierung
-            meinZug.Nummer= "ICE 1";
+            meinZug = new Zug("ICE 1"); //instanzierung
+            //meinZug.Nummer= "ICE 1";
             meinZug.Wlan = true;
             meinZug.Antriebart = "elektrisch";
             ZeigeZug(meinZug);
@@ -37,6 +37,7 @@ namespace HalloKlassen
             Console.WriteLine("------------------------");
             Console.WriteLine($"{zug.Nummer} {zug.Geschwindigkeit} km/h");
             Console.WriteLine("------------------------");
+            int r = 75478 / int.Parse("0");
 
         }
     }

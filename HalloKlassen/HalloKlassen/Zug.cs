@@ -8,6 +8,16 @@ namespace HalloKlassen
 {
     public class Zug
     {
+        public Zug() //default ctor
+        {
+            AnzahlWagen = 3;
+        }
+
+        public Zug(string nummer)
+        {
+            Nummer = nummer;
+        }
+
         public string Antriebart { get; set; }
         public double Laenge { get; set; }
         public int AnzahlWagen { get; set; }
