@@ -14,15 +14,15 @@ namespace HalloVererbung.Model
                 if (value < 0)
                     throw new ArgumentException("Die Zuladung kann nicht negativ sein");
 
-                if (value > MaxZuladung)
+                if (MaxZuladung > 0 && value > MaxZuladung)
                     throw new ZulandungsFehlerException()
                     {
                         MaxZuläßigeZuladung = MaxZuladung,
                         ÜberschrittenUm = value - MaxZuladung
                     };
 
-                if (value <= MaxZuladung)
-                    zuladung = value;
+
+                zuladung = value;
             }
         }
 

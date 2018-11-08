@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace HalloVererbung.WinformsGUI
 {
@@ -68,8 +69,8 @@ namespace HalloVererbung.WinformsGUI
                         }
                         sw.Close();
                         Process.Start(dlg.FileName);
-
                     }
+
                     catch (PathTooLongException ex)
                     {
                         MessageBox.Show($"Fehler: {ex.Message}");
@@ -103,6 +104,38 @@ namespace HalloVererbung.WinformsGUI
                     MessageBox.Show(ex.Message);
                 }
             }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            var dlg = new SaveFileDialog()
+            {
+                Filter = "XML-Zugdateien|*.xml"
+            };
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                var serial = new XmlSerializer(typeof(List<GueterZug>));
+                var sw = new StreamWriter(dlg.FileName);
+                serial.Serialize(sw, dataGridView1.DataSource);
+                sw.Close();
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            var dlg = new OpenFileDialog()
+            {
+                Filter = "XML-Zugdateien|*.xml"
+            };
+
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                var serial = new XmlSerializer(typeof(List<GueterZug>));
+                var sr = new StreamReader(dlg.FileName);
+                dataGridView1.DataSource = serial.Deserialize(sr);
+                sr.Close();
+            }
+
         }
     }
 }
