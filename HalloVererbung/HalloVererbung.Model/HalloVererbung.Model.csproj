@@ -45,6 +45,7 @@
     <Compile Include="PersonenZug.cs" />
     <Compile Include="Schienenfahrzeug.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ZulandungsFehlerException.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
