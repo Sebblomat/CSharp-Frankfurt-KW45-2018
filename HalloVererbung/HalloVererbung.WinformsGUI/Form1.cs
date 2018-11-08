@@ -15,6 +15,22 @@ namespace HalloVererbung.WinformsGUI
             InitializeComponent();
             //dataGridView1.AutoGenerateColumns = false;
             dataGridView1.DataSource = new List<GueterZug>();
+
+            button7.Click += Button7_Click;
+            button7.MouseDown += Button7_MouseDown;
+
+        }
+        private void Button7_MouseDown(object sender, MouseEventArgs e)
+        {
+            MessageBox.Show(e.Button.ToString());
+
+        }
+
+
+        private void Button7_Click(object sender, EventArgs e)
+        {
+            button7.Click -= Button7_Click;
+            MessageBox.Show("Thx 4 da click!");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -136,6 +152,22 @@ namespace HalloVererbung.WinformsGUI
                 sr.Close();
             }
 
+        }
+
+        private void tripleClickButton1_TripleClick(object sender, EventArgs e)
+        {
+            Console.Beep();
+            MessageBox.Show("Tadaaa");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MachBeep();
+        }
+
+        private void MachBeep()
+        {
+            throw new NotImplementedException();
         }
     }
 }
