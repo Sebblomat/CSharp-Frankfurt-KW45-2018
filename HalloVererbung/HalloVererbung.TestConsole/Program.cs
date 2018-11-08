@@ -40,6 +40,9 @@ namespace HalloVererbung.TestConsole
             Console.WriteLine($"{zug.Nummer} aus dem Jahr {zug.Baujahr:yyyy} " +
                               $"mit der Spurbreite {zug.Spurbreite}");
 
+            zug.Hupen();
+
+
             if (zug is PersonenZug)
             {
                 PersonenZug pZug = (PersonenZug)zug;//casten
@@ -52,7 +55,7 @@ namespace HalloVererbung.TestConsole
                 Console.WriteLine($"\tIst ein PersonenZug mit {pZugBox.Sitzplaetze} Sitzenplätzen");
             }
 
-            //ab VS2017 - pattern machting
+            //ab VS2017 - pattern matchting
             if (zug is PersonenZug pZugg)
             {
                 Console.WriteLine($"\tIst ein PersonenZug mit {pZugg.Sitzplaetze} Sitzenplätzen");

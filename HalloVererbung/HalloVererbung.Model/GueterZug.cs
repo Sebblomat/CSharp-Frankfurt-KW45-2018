@@ -1,4 +1,6 @@
-﻿namespace HalloVererbung.Model
+﻿using System;
+
+namespace HalloVererbung.Model
 {
     public class GueterZug : Schienenfahrzeug
     {
@@ -25,5 +27,14 @@
         //}
 
         public int MaxZuladung { get; set; }
+
+
+        public override void Hupen()
+        {
+            base.Hupen();
+            Console.Beep(800, 400);
+            Console.Beep(1100, 300);
+
+        }
     }
 }

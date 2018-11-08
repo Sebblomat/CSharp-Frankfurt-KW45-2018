@@ -11,5 +11,11 @@ namespace HalloVererbung.Model
         public string Nummer { get; set; }
         public DateTime Baujahr { get; set; }
         public int Spurbreite { get; set; } = 1435;
+
+        public virtual void Hupen()
+        {
+            Console.WriteLine("Das Schienenfahrzeug hupt!");
+            Console.Beep();
+        }
     }
 }
