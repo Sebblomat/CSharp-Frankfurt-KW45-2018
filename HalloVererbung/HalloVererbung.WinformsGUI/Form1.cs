@@ -92,7 +92,11 @@ namespace HalloVererbung.WinformsGUI
             {
                 try
                 {
-                    zug.Zuladung = -5;
+                    zug.Zuladung = 5999999;
+                }
+                catch (ZulandungsFehlerException ex)
+                {
+                    MessageBox.Show($"Die maximale Zuladung von {ex.MaxZuläßigeZuladung} wurde um {ex.ÜberschrittenUm} überschritten");
                 }
                 catch (Exception ex)
                 {
