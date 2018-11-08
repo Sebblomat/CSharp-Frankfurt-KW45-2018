@@ -11,6 +11,9 @@ namespace HalloVererbung.Model
             get => zuladung;
             set
             {
+                if (value < 0)
+                    throw new ArgumentException("Die Zuladung kann nicht negativ sein");
+
                 if (value <= MaxZuladung)
                     zuladung = value;
             }

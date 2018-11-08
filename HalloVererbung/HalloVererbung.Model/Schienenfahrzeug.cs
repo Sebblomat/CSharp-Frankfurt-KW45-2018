@@ -6,8 +6,19 @@ using System.Threading.Tasks;
 
 namespace HalloVererbung.Model
 {
-    public class Schienenfahrzeug
+    public enum Antriebsart
     {
+        Diesel = 1,
+        Elektro = 2,
+        PerHand = 4,
+        Dampf = 8,
+        Segel = 16,
+        Warp = 32
+    }
+
+    public class Schienenfahrzeug : Object
+    {
+        public Antriebsart Antriebsart { get; set; }
         public string Nummer { get; set; }
         public DateTime Baujahr { get; set; }
         public int Spurbreite { get; set; } = 1435;
@@ -18,4 +29,5 @@ namespace HalloVererbung.Model
             Console.Beep();
         }
     }
+
 }

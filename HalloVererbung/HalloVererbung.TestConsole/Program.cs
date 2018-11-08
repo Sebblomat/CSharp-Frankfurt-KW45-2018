@@ -17,7 +17,8 @@ namespace HalloVererbung.TestConsole
                 Klimaanlage = true,
                 Baujahr = new DateTime(2012, 1, 29),
                 Toiletten = 10,
-                Sitzplaetze = 657
+                Sitzplaetze = 657,
+                Antriebsart = Antriebsart.Elektro,
             };
 
             ZeigeZug(pz);
@@ -26,7 +27,8 @@ namespace HalloVererbung.TestConsole
             {
                 Nummer = "54387",
                 Baujahr = new DateTime(1978, 3, 5),
-                MaxZuladung = 1001
+                MaxZuladung = 1001,
+                Antriebsart = Antriebsart.Elektro | Antriebsart.PerHand
             };
 
             ZeigeZug(gz);
@@ -38,7 +40,7 @@ namespace HalloVererbung.TestConsole
         static void ZeigeZug(Schienenfahrzeug zug)
         {
             Console.WriteLine($"{zug.Nummer} aus dem Jahr {zug.Baujahr:yyyy} " +
-                              $"mit der Spurbreite {zug.Spurbreite}");
+                              $"mit der Spurbreite {zug.Spurbreite} wir angetrieben per {(int)zug.Antriebsart} {zug.Antriebsart}");
 
             zug.Hupen();
 
