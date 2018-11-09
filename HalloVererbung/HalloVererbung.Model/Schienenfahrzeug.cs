@@ -16,8 +16,10 @@ namespace HalloVererbung.Model
         Warp = 32
     }
 
-    public class Schienenfahrzeug : Object
+    public abstract class Schienenfahrzeug : Object
     {
+        public abstract void Öffnen();
+
         public Antriebsart Antriebsart { get; set; }
         public string Nummer { get; set; }
         public DateTime Baujahr { get; set; }

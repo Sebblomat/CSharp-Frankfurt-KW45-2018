@@ -34,6 +34,7 @@ namespace HalloVererbung.TestConsole
 
             ZeigeZug(gz);
             GetBaguette(gz);
+            
 
             Console.WriteLine("Ende");
             Console.ReadLine();

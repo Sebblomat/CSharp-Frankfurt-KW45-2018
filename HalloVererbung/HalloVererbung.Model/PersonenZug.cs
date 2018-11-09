@@ -26,5 +26,10 @@ namespace HalloVererbung.Model
             Console.WriteLine("PersonenZug hupt!");
             Console.Beep(600, 1000);
         }
+
+        public override void Öffnen()
+        {
+            Console.WriteLine("Tür geht auf");
+        }
     }
 }

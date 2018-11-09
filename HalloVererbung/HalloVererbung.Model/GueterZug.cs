@@ -52,5 +52,10 @@ namespace HalloVererbung.Model
             Console.Beep(1100, 300);
 
         }
+
+        public override void Öffnen()
+        {
+            Console.WriteLine("Tor öffnen");
+        }
     }
 }
