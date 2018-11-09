@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GueterZug.cs" />
+    <Compile Include="IFrankreich.cs" />
+    <Compile Include="IOesterreich.cs" />
     <Compile Include="PersonenZug.cs" />
     <Compile Include="Schienenfahrzeug.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

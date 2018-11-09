@@ -2,7 +2,7 @@
 
 namespace HalloVererbung.Model
 {
-    public class GueterZug : Schienenfahrzeug
+    public class GueterZug : Schienenfahrzeug,IFrankreich
     {
         private int zuladung;
 
@@ -37,7 +37,13 @@ namespace HalloVererbung.Model
         //}
 
         public int MaxZuladung { get; set; }
+        public int FRSpurbreite { get => Spurbreite / 2; set => Spurbreite = value * 2; }
 
+
+        public string GetBaguette()
+        {
+            return "Leer";
+        }
 
         public override void Hupen()
         {

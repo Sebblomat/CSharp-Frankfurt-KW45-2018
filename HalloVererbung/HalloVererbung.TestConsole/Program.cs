@@ -22,6 +22,7 @@ namespace HalloVererbung.TestConsole
             };
 
             ZeigeZug(pz);
+            GetBaguette(pz);
 
             GueterZug gz = new GueterZug()
             {
@@ -32,9 +33,15 @@ namespace HalloVererbung.TestConsole
             };
 
             ZeigeZug(gz);
+            GetBaguette(gz);
 
             Console.WriteLine("Ende");
             Console.ReadLine();
+        }
+
+        static void GetBaguette(IFrankreich ding)
+        {
+            Console.WriteLine(ding.GetBaguette());
         }
 
         static void ZeigeZug(Schienenfahrzeug zug)
